@@ -14,7 +14,7 @@
         if(money < 0 || year <0 || (interestRate < 0 || interestRate > 100)){
             alert("du liệu nhập vào không đúng");
         }else{
-            let interestMoney =  parseFloat(money*interestRate);
+            let interestMoney =  parseFloat(money*interestRate/100);
             let saveMoney = parseFloat(money) + parseFloat(interestMoney)*parseFloat(year);
             document.write(`<h3>Tiền Lãi : ${interestMoney} / Năm</h3>`);
             document.write(`<h3>Số tiền nhận được sau ${year} là : ${saveMoney}</h3>`);
