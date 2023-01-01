@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Hiển thị ngày-tháng-năm</title>
+</head>
+<body>
+    <input type="number" id="day" placeholder="Nhập ngày">
+    <input type="number" id="month" placeholder="Nhập tháng">
+    <input type="number" id="year" placeholder="Nhập năm">
+    <button id="button">Check</button>
+    <h3 id="result"></h3>
+    <script>
+        let button = document.getElementById("button");
+        button.addEventListener("click", function printDayMonthYear(){
+            let day = parseInt(document.getElementById("day").value);
+            let month = parseInt(document.getElementById("month").value);
+            let year = parseInt(document.getElementById("year").value);
+            // checkDay(day);
+            checkMonth(month);
+            
+        });
+
+        function checkDay(day){
+            if(day <=0 || day > 31){
+                alert("Ngày nhập vào không hợp lệ");
+                document.getElementById("day").value = "";
+            }
+        }
+
+        function checkMonth(month){
+            if(month <=0 || month > 12){
+                alert("Tháng nhập vào không hợp lệ");
+                document.getElementById("month").value = "";
+            }
+        }
+
+        function checkYear(year){
+            if(year <=0 ){
+                alert("Năm nhập vào không hợp lệ");
+                document.getElementById("year").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

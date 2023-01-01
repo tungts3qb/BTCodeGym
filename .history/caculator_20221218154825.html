@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+<body>
+    <h2>Caculator</h2>
+    <input type="number" id="firstNum">
+    <input type="number" id="secondNum">
+    <br>
+    <br>
+    <button id="addition">Addition(+)</button>
+    <button id="subtraction">Subtrction(-)</button>
+    <button id="mutiplication">Mutiplication(x)</button>
+    <button id="division">Division(/)</button>
+    <br>
+    <h3 id="result">Result Division : </h3>
+
+    <script>
+        
+        let addition  = document.getElementById("addition");
+        let result = document.getElementById("result");
+        let str = "Result Division : ";
+        addition.addEventListener("click", function addition(){
+            result.innerHTML = str;
+            let firstNum = parseFloat(document.getElementById("firstNum").value,3);
+            let secondNum = parseFloat(document.getElementById("secondNum").value,3);
+            console.log(firstNum);
+            if(Number.isNaN(firstNum) || Number.isNaN(secondNum)){
+                alert("fffff")
+            }
+            result.innerHTML = str + `${firstNum + secondNum}`;
+        });
+        
+    </script>
+</body>
+</html>
