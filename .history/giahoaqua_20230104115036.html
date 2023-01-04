@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .check-fruit-form {
+        border: solid 1px black;
+        max-width: 40%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+      .input-box {
+        margin-bottom: 10px;
+      }
+      #price {
+        width: 200px;
+        height: 20px;
+      }
+      .input-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+      }
+      span {
+        font-weight: bold;
+        font-size: 50px;
+      }
+      .result {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    </style>
+    <div class="check-fruit-form">
+      <h1>Giá Hoa Quả</h1>
+      <div class="input-box">
+        <input type="text" name="" id="price" />
+        <button class="check-price">Xem giá</button>
+      </div>
+      <div class="result">
+        <span><span class="result-price">120000</span> VND/kg</span>
+      </div>
+    </div>
+    <script>
+      let input = document.getElementById("price");
+      let button = document.querySelector(".check-price");
+      button.addEventListener("click", function () {
+        let text = input.value.toLowerCase();
+        console.log(text);
+        switch (text) {
+          case "ổi":
+            console.log("ổi");
+            break;
+          case "dưa hấu":
+            console.log("ổi");
+            break;
+          case "táo":
+            console.log("ổi");
+            break;
+          case "xoài":
+            console.log("ổi");
+            break;
+          case "cam":
+            console.log("ổi");
+            break;
+          case "chôm chôm":
+            console.log("ổi");
+            break;
+          case "măng cụt":
+            console.log("ổi");
+            break;
+
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
