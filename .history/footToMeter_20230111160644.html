@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+  </head>
+  <body>
+    <div class="form-convert">
+      <h2 id="title-form">Foot to Meter</h2>
+      <label id="label-form">Your choose : </label>
+      <select name="value" id="value-convert" onchange="changeTitle()">
+        <option value="toMeter" selected="selected">Foot to Meter</option>
+        <option value="toFoot">Meter to Foot</option>
+      </select>
+      <br />
+      <div id="input-region">
+        <label id="input-value">Value</label>
+        <input type="number" name="" id="input-number" />
+      </div>
+      <p>Result : <span id="result">44444</span></p>
+      <!-- <input type="submit" value="Convert" id="btn-convert" /> -->
+      <button type="submit" id="btn-convert">Convert</button>
+    </div>
+
+    <script>
+      function footToMeter(foot) {
+        foot = parseFloat(foot);
+        return 0.305 * foot;
+      }
+
+      function meterToFoot(meter) {
+        meter = parseFloat(meter);
+        return 3.279 * meter;
+      }
+
+      var option = document.getElementById("value-convert");
+      var clickBtn = document.getElementById("btn-convert");
+      var titleForm = document.getElementById("title-form")
+      clickBtn.addEventListener("click", function convertValue() {
+        console.log(option.value);
+      });
+
+      function changeTitle(){
+        if(){
+
+        }
+      }
+    </script>
+  </body>
+</html>
