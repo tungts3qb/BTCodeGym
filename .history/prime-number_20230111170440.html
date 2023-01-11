@@ -9,10 +9,8 @@
   <body>
     <script>
       function isPrime(number) {
-        number = parseInt(number);
-        if (isNaN(number)) {
-          alert("gia tri khong hop le");
-          return;
+        if (!parseInt(number)) {
+          alert("input khong phai la so nguyen");
         }
         if (number == 1 || number == 0) {
           alert(`${number} khong phai la so nguyen to`);
@@ -25,14 +23,14 @@
           }
         }
         if (count == 0) {
-          alert(`${number} la so nguyen to`);
+          alert("la so nguyen to");
         } else {
-          alert(`${number} khong phai la so nguyen to`);
+          alert("khong phai la so nguyen to");
         }
       }
       let input = prompt("Nhap so");
       console.log(input);
-      isPrime(input);
+      isPrime(parseInt(input));
     </script>
   </body>
 </html>
