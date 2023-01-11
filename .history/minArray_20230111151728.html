@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Thực hành] Hàm tìm giá trị nhỏ nhất của mảng</title>
+  </head>
+  <body>
+    <h1 id="title">
+      Giá trị nhỏ nhất là : <span id="minValue">3</span> tại vị trí
+      <span id="position">2</span>
+    </h1>
+
+    <script>
+      let arr1 = [3, 5, 1, 8, -3, 7, 8];
+      let arr2 = [7, 12, 6, 9, 20, 56, 89, -1];
+      let arr3 = [];
+      let arr4 = [0, 0, 0, 0, 0, 0];
+
+      function minArray(arr) {
+        if (arr.length == 0) {
+          document.getElementById("title").innerHTML = "";
+          document.getElementById("title").innerHTML = "Mảng rỗng";
+        }
+        if (!Array.isArray(arr)) {
+          document.getElementById("title").innerHTML = "";
+          document.getElementById("title").innerHTML =
+            "Tham số truyền vào không phải là mảng";
+        }
+        let min = arr[0];
+        let position = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+            position = i;
+          }
+        }
+        return position;
+      }
+
+      let position = minArray(111111);
+      document.getElementById("minValue").innerHTML = arr4[position];
+      document.getElementById("position").innerHTML = position;
+    </script>
+  </body>
+</html>
