@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="450"
+      style="border: 1px solid blue; margin-left: 100px; display: block"
+    >
+    </canvas>
+
+    <button type="button" style="margin: 10px 0 0 100px" onclick="xulyTraiPhai">
+      Trai - Phai
+    </button>
+    <button type="button" style="margin: 10px 0 0 0" onclick="xudungTraiPhai">
+      Dung Trai - Phai
+    </button>
+    <button type="button" style="margin: 10px 0 0 0" onclick="xulyTrenDuoi">
+      Tren - Duoi
+    </button>
+    <button type="button" style="margin: 10px 0 0 0" onclick="xudungTrenDuoi">
+      Dung Tren - Duoi
+    </button>
+
+    <script>
+      let myCanvas = document.getElementById("myCanvas");
+      let context = myCanvas.getContext("2d");
+      const KHOANG_CACH = 25;
+      let xDistance = 50;
+      let yDistance = 50;
+
+      function veHCN(direction = 1) {
+        // xoa hinh cu
+        context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        if (direction == 1) {
+          if (xDistance < myCanvas.width) {
+            xDistance += KHOANG_CACH;
+          } else {
+            xDistance = KHOANG_CACH;
+          }
+        } else if (direction == 2) {
+          if (yDistance < myCanvas.height) {
+            yDistance += KHOANG_CACH;
+          } else {
+            yDistance = KHOANG_CACH;
+          }
+        }
+        context.fillStyle = "green";
+        context.fillRect(xDistance, yDistance, 77, 77);
+      }
+
+      function xulyTraiPhai() {
+        console.log("hi");
+        veHCN(1);
+        setInterval(veHCN, 2000, 1);
+      }
+
+      function xudungTraiPhai() {
+        clearInterval(veHCN);
+      }
+    </script>
+  </body>
+</html>
