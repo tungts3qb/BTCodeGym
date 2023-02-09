@@ -1,0 +1,10 @@
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+.input-height,
+.btn-change {
+  margin-left: 50px;
+}

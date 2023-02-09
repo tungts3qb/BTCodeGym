@@ -1,0 +1,17 @@
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+.input-height,
+.btn-change {
+  margin-left: 50px;
+}
+
+#myCanvas {
+  border: 1px solid black;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
