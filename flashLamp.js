@@ -18,7 +18,6 @@ class Battery {
 class FlashLamp {
   constructor() {
     this.status = 0;
-    this.batery = null;
   }
   setBattery(batery) {
     this.batery = batery;
