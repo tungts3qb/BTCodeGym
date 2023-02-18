@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+      canvas = document.getElementById("myCanvas");
+      var count = 1;
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        var count = 1;
+        ctx.beginPath();
+        ctx.lineWidth = count;
+        ctx.moveTo(0, 0);
+        ctx.lineTo(canvas.width, 0s);
+        ctx.stroke();
+        // for (i = 0; i < 360; i += 30) {
+        //   ctx.beginPath();
+        //   ctx.lineWidth = count;
+        //   ctx.moveTo(0, i);
+        //   ctx.lineTo(canvas.width, i);
+        //   ctx.stroke();
+        //   count++;
+        // }
+      }
+    </script>
+  </body>
+</html>
